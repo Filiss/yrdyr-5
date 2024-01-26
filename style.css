@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
@@ -23,14 +23,13 @@
   --switch-bg-url: url(./assets/sun.svg);
 }
 
-
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  
 }
 
 #teste1 {
@@ -60,7 +59,7 @@ body * {
   margin: 4px auto;
 }
 
-#suit button{
+#suit button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -79,19 +78,16 @@ body * {
   left: initial;
 }
 
-  #suit span{
-    display: block;
-    width: 64px;
-    height: 24px;
-    background: var(--surface-color-hover);
-    border: 1px solid var(--stroke-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 9999px;
-  }
-
-
-
+#suit span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color-hover);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
 
 /*links */
 
@@ -101,10 +97,9 @@ ul {
   flex-direction: column;
   gap: 16px;
   padding: 24px 0;
-
 }
 
-ul li a{
+ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +111,7 @@ ul li a{
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
-  
+
   text-decoration: none;
   font-weight: 500;
 
@@ -124,21 +119,19 @@ ul li a{
 }
 
 ul li a:hover {
- 
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
-  
 }
 
 /*social-links*/
 
 #scl {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 
- padding: 24px 0;
+  padding: 24px 0;
 
- font-size: 24px;
+  font-size: 24px;
 }
 
 #scl a {
@@ -152,11 +145,22 @@ ul li a:hover {
 }
 
 #scl a:hover {
-  background:  var(--social-link-hover);
+  background: var(--social-link-hover);
 }
 
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/*    media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --br-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --br-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
